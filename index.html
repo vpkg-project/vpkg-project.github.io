@@ -8,72 +8,75 @@
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
     <meta name="google-site-verification" content="BmGrbm5-MzHO6w_NN8bSWRUNg2cUaVSLMhLLwVtev0g" />
     <title>vpkg - alternative package manager for V</title>
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+    <link rel="manifest" href="assets/site.webmanifest">
+    <link rel="mask-icon" href="assets/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
+    <style>
+        .bg-vpkg { background-color: #31c9dd; }
+        .text-vpkg { color: #31c9dd; }
+        .bg-dl-btn { background-color: rgba(0, 0, 0, 0.2); }
+        .bg-dl-btn:hover { background-color: rgba(0, 0, 0, 0.4); }
+        .bg-vpkg-1 { background-color: #27a1b1; }
+        .hover\:bg-vpkg-1:hover { background-color: #1d7985; }
+    </style>
 </head>
 <body class="font-sans min-h-screen bg-white">
-    <section class="bg-gray-300 text-center block py-16 w-full">
-        <div class="max-w-5xl mx-auto px-4 sm:px-16 md:px-0">
-            <h1 class="text-6xl">vpkg</h1>
-            <h2 class="text-2xl  mb-4">(v package)</h2>
-            <p class="text-2xl mb-12">An alternative package manager written on <a href="https://vlang.io" class="underline text-blue-700">V</a>, for V.</p>
+    <div class="md:h-screen flex flex-col md:flex-row flex-no-wrap">
+        <div class="w-full md:w-1/2 p-8 md:p-16 lg:p-24 flex flex-col text-white justify-center bg-vpkg items-start">
+            <img src="assets/vpkg-logo@6x.png" class="w-1/2 md:w-2/3 mx-auto md:m-0 pb-8" alt="">
+            <h1 class="text-center md:text-left text-xl md:text-4xl xl:text-5xl mx-auto md:mt-auto leading-tight mb-12">An alternative package manager written on for V.</h1>
 
-            <a href="https://github.com/vpkg-project/vpkg/releases" class="inline-block text-xl bg-blue-500 hover:bg-blue-700 border-b-4 border-blue-700 font-bold text-white rounded px-8 py-4">Download</a>
+            <a href="https://github.com/vpkg-project/vpkg/releases" class="inline-block w-full lg:w-auto text-center lg:text-left text-xl lg:text-2xl hover:shadow-lg bg-dl-btn font-bold text-white rounded px-8 lg:px-16 py-4">Download</a>
+            <p class="mx-auto md:mx-0 md:mt-auto py-4">Pre-built binaries available for Linux and Windows.</p>
         </div>
-    </section>
-    <div class="max-w-5xl px-2 py-8 mx-auto">
-        <h2 class="text-3xl text-center mb-4 text-gray-700 font-bold">Bringing the best of dependency management on V.</h2>
-        <section class="pb-8 w-full flex flex-row flex-wrap">
-            <div class="w-1/2 md:w-1/3 px-3 py-6">
-                <h3 class="text-2xl mb-3 text-gray-600">Decentralized.</h3>
-                <p>Download and use packages from other sources aside from VPM and vpkg registry.</p>
+        <div class="w-full md:w-1/2 p-8 lg:p-16 xl:p-24 flex flex-row flex-wrap">
+            <h2 class="text-xl xl:text-4xl text-center md:text-left mb-4 text-gray-700 font-bold">Bringing the best of dependency management on V.</h2>
+            <div class="w-full sm:w-1/2 p-1">
+                <h3 class="text-xl xl:text-2xl mb-3 text-gray-600">Decentralized.</h3>
+                <p>Download and use packages from other sources aside from VPM and the vpkg registry.</p>
             </div>
-            <div class="w-1/2 md:w-1/3 px-3 py-6">
-                <h3 class="text-2xl mb-3 text-gray-600">Easy to use.</h3>
+            <div class="w-full sm:w-1/2 p-1">
+                <h3 class="text-xl xl:text-2xl mb-3 text-gray-600">Easy to use.</h3>
                 <p>Set-up, use, and master the commands of vpkg CLI within minutes.</p>
             </div>
-            <div class="w-1/2 md:w-1/3 px-3 py-6">
-                <h3 class="text-2xl mb-3 text-gray-600">Fast.</h3>
-                <p>vpkg can be run from the low-spec PC to the fastest supercomputers.</p>
+            <div class="w-full sm:w-1/2 p-1">
+                <h3 class="text-xl xl:text-2xl mb-3 text-gray-600">Fast.</h3>
+                <p>Runs perfectly on your potato PC up to the fastest supercomputers.</p>
             </div>
-            <div class="w-1/2 md:w-1/3 px-3 py-6">
-                <h3 class="text-2xl mb-3 text-gray-600">Interoperable.</h3>
-                <p>It supports v.mod, and .vpm.json for reading package manifests and managing dependencies.</p>
+            <div class="w-full sm:w-1/2 p-1">
+                <h3 class="text-xl xl:text-2xl mb-3 text-gray-600">Interoperable.</h3>
+                <p>Supports v.mod, and .vpm.json for reading package manifests and managing dependencies.</p>
             </div>
-            <div class="w-1/2 md:w-1/3 px-3 py-6">
-                <h3 class="text-2xl mb-3 text-gray-600">Light.</h3>
-                <p>Weighs only at < 200kb so it can be used in devices with tight storage or in low network conditions. </p>
+            <div class="w-full sm:w-1/2 p-1">
+                <h3 class="text-xl xl:text-2xl mb-3 text-gray-600">Light.</h3>
+                <p>Weighs at less than 300kb. Perfect with devices running on tight storage or in low network conditions.</p>
             </div>
-            <div class="w-1/2 md:w-1/3 px-3 py-6">
-                <h3 class="text-2xl mb-3 text-gray-600">Reliable.</h3>
-                <p>vpkg uses a lockfile mechanism to ensure that all your dependencies work across all of your machines.</p>
+            <div class="w-full sm:w-1/2 p-1">
+                <h3 class="text-xl xl:text-2xl mb-3 text-gray-600">Reliable.</h3>
+                <p>Uses a lockfile mechanism to ensure that all your dependencies work across all of your machines.</p>
             </div>
-        </section>
-        <section class="py-16 border-t border-gray-500 flex flex-col-reverse md:flex-row text-center md:text-left">
+        </div>
+    </div>
+    <div class="max-w-6xl px-8 md:px-2 mx-auto">
+        <section class="py-8 flex flex-col md:flex-row text-center md:text-left">
             <div class="w-full md:w-3/4 md:pr-8">
-                <h2 class="text-4xl md:text-6xl mt-4 md:mt-0 mb-4">vpkg <span class="text-gray-600">registry</span></h2>
-                <p class="text-xl mb-8 md:pr-4">An alternative package registry for managing and publishing your V modules. It's free, simple, and straightforward to use.</p>        
-                <a href="https://vpkg-project.github.io/registry" class="inline-block bg-blue-500 hover:bg-blue-700 border-b-2 border-blue-700 font-bold text-white rounded px-6 py-3">Visit the registry</a>
+                <h2 class="text-3xl md:text-6xl mt-4 md:mt-0 mb-4">vpkg <span class="text-gray-600">registry</span></h2>
+                <p class="text-xl mb-8 md:pr-4">An alternative package registry for managing and publishing your V modules. <br />It's free, simple, and straightforward to use.</p>        
+                
             </div>
-            <div class="w-full md:w-1/4">
-                <img src="vpkg.png" class="mx-auto w-1/3 md:w-full" alt="vpm logo">
-            </div>
-        </section>
-        <section class="pt-8 pb-16 border-t border-gray-500 flex flex-col">
-            <div class="text-center px-8 md:px-0">
-                <h2 class="text-2xl md:text-4xl max-w-2xl mx-auto mb-8">vpkg is an open source project that brings the V ecosystem to its fullest potential.</h2>
-                <a href="https://github.com/v-pkg/vpkg" class="inline-block bg-blue-500 hover:bg-blue-700 border-b-2 border-blue-700 font-bold text-white rounded px-6 py-3">Contribute on GitHub</a>
+            <div class="w-full md:w-1/4 my-auto">
+                <a href="https://vpkg-project.github.io/registry" class="block bg-vpkg-1 text-center hover:bg-vpkg-1 hover:shadow border-b-2 font-bold text-xl text-white rounded-md p-3 md:p-6">Visit the registry</a>
             </div>
         </section>
     </div>
-    <footer class="bg-gray-200 py-3 w-full">
-        <div class="max-w-5xl mx-auto px-2 text-center">
-            &copy; 2020 <a href="https://nedpals.xyz">Ned Palacios</a> / <a href="https://github.com/vpkg-project">vpkg project</a>
+    <footer class="w-full">
+        <div class="max-w-6xl py-8 border-t-2 border-gray-400 text-gray-700 flex flex-row flex-no-wrap justify-between mx-auto px-2 text-center">
+            <p>&copy; 2020 <a href="https://nedpals.xyz" class="hover:text-black">Ned Palacios</a> / <a href="https://github.com/vpkg-project" class="hover:text-black">vpkg project</a></p>
+            <a href="https://github.com/vpkg-project/vpkg" class="hover:text-black">Contribute on GitHub</a>
         </div>
     </footer>
 </body>
